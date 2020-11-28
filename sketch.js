@@ -14,7 +14,7 @@ var mango1, mango2, mango3, mango4, mango5, mango6, mango7, mango8, mango9, mang
 
 
 function preload(){
-    boyImage = loadImage("Plucking mangoes/boy.png");
+    boyImage = loadImage("boy.png");
 }
 function setup(){
     createCanvas(1400,700);
