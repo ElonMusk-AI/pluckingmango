@@ -7,7 +7,7 @@ class Tree{
             density:1.2
         }
         this.body = Bodies.rectangle(x,y,100,100,options);
-        this.tree = loadImage("Plucking mangoes/tree.png");
+        this.tree = loadImage("tree.png");
         World.add(world,this.body);
     }
     display(){
