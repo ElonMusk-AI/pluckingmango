@@ -1,5 +1,5 @@
 class Mango{
-    constructor(x,y){
+    constructor(x,y,r){
         var options = {
             isStatic: true,
             friction: 1,
@@ -7,16 +7,21 @@ class Mango{
         }
         this.x = x;
         this.y = y;
-        this.body = Bodies.circle(this.x,this.y,100/2,options);
+        this.r = r;
+        this.body = Bodies.circle(this.x,this.y,this.r/2,options);
         this.image = loadImage("mango.png");
         World.add(world,this.body);    
     }
     display(){
-        rectMode(CENTER);
         var pos = this.body.position;
+        var angle = this.body.angle;
         push();
+        translate(pos.x, pos.y)
+        rotate(angle);
+        rectMode(CENTER);
+        ellipse(0,0,this.r,this.r);
         imageMode(CENTER);
-        image(this.image,pos.x,pos.y,50,50);
+        image(this.image,0,0,60,60);
         pop();
     }
 }
